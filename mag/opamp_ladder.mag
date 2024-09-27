@@ -1,0 +1,73 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1727469471
+<< checkpaint >>
+rect -1260 5109 10491 5321
+rect -1260 797 40036 5109
+rect -1260 -3660 40499 797
+rect 7918 -3713 40499 -3660
+rect 8381 -3766 40499 -3713
+rect 8844 -3819 40499 -3766
+rect 9307 -3872 40499 -3819
+rect 37463 -3925 40499 -3872
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+rect 0 -2000 200 -1800
+rect 0 -2400 200 -2200
+use opamp  x1
+timestamp 1727469310
+transform 1 0 -2685 0 1 485
+box 2685 -2885 11916 3576
+use opamp  x2
+timestamp 1727469310
+transform 1 0 8398 0 1 273
+box 2685 -2885 11916 3576
+use opamp  x3
+timestamp 1727469310
+transform 1 0 17629 0 1 273
+box 2685 -2885 11916 3576
+use opamp  x4
+timestamp 1727469310
+transform 1 0 26860 0 1 273
+box 2685 -2885 11916 3576
+use sky130_fd_pr__res_generic_nd_BRW5P9  XR1
+timestamp 0
+transform 1 0 38981 0 1 -1564
+box -258 -1101 258 1101
+use sky130_fd_pr__res_generic_nd_BRW5P9  XR2
+timestamp 0
+transform 1 0 9436 0 1 -1352
+box -258 -1101 258 1101
+use sky130_fd_pr__res_generic_nd_BRW5P9  XR3
+timestamp 0
+transform 1 0 9899 0 1 -1405
+box -258 -1101 258 1101
+use sky130_fd_pr__res_generic_nd_BRW5P9  XR4
+timestamp 0
+transform 1 0 10362 0 1 -1458
+box -258 -1101 258 1101
+use sky130_fd_pr__res_generic_nd_BRW5P9  XR5
+timestamp 0
+transform 1 0 10825 0 1 -1511
+box -258 -1101 258 1101
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 VDD
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 256 0 0 0 in
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 256 0 0 0 VSS
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 256 0 0 0 out3
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 256 0 0 0 out2
+port 4 nsew
+flabel metal1 0 -2000 200 -1800 0 FreeSans 256 0 0 0 out1
+port 5 nsew
+flabel metal1 0 -2400 200 -2200 0 FreeSans 256 0 0 0 out0
+port 6 nsew
+<< end >>

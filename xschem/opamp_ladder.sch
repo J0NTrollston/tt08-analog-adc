@@ -50,13 +50,13 @@ lab=VSS}
 N -130 -750 -120 -750 {
 lab=VSS}
 N -100 -720 -100 -600 {
-lab=#net1}
+lab=node_3}
 N -100 -540 -100 -420 {
-lab=#net2}
+lab=node_2}
 N -100 -360 -100 -240 {
-lab=#net3}
+lab=node_1}
 N -100 -180 -100 -60 {
-lab=#net4}
+lab=node_0}
 N 180 -190 180 -170 {
 lab=VDD}
 N 180 -370 180 -350 {
@@ -66,13 +66,13 @@ lab=VDD}
 N 180 -730 180 -710 {
 lab=VDD}
 N -100 -140 120 -140 {
-lab=#net4}
+lab=node_0}
 N -100 -320 120 -320 {
-lab=#net3}
+lab=node_1}
 N -100 -500 120 -500 {
-lab=#net2}
+lab=node_2}
 N -100 -680 120 -680 {
-lab=#net1}
+lab=node_3}
 N 265 -120 280 -120 {
 lab=out0}
 N 260 -120 265 -120 {
@@ -159,3 +159,7 @@ L=8.4
 spiceprefix=X
 model=res_generic_nd
 mult=1}
+C {devices/lab_pin.sym} -100 -140 0 0 {name=p19 sig_type=std_logic lab=node_0}
+C {devices/lab_pin.sym} -100 -320 0 0 {name=p25 sig_type=std_logic lab=node_1}
+C {devices/lab_pin.sym} -100 -500 0 0 {name=p26 sig_type=std_logic lab=node_2}
+C {devices/lab_pin.sym} -100 -680 0 0 {name=p27 sig_type=std_logic lab=node_3}

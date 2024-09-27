@@ -40,15 +40,15 @@ write opamp_ladder_tb.raw
 *.iopin VDD
 *.iopin VSS
 *.opin out1
-x1 VDD VSS net4 in out0 VSS opamp
-XR2 VSS net4 VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
-XR3 net4 net3 VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
-XR4 net3 net2 VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
-XR5 net2 net1 VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
-x2 VDD VSS net3 in out1 VSS opamp
-x3 VDD VSS net2 in out2 VSS opamp
-x4 VDD VSS net1 in out3 VSS opamp
-XR1 net1 VDD VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
+x1 VDD VSS node_0 in out0 VSS opamp
+XR2 VSS node_0 VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
+XR3 node_0 node_1 VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
+XR4 node_1 node_2 VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
+XR5 node_2 node_3 VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
+x2 VDD VSS node_1 in out1 VSS opamp
+x3 VDD VSS node_2 in out2 VSS opamp
+x4 VDD VSS node_3 in out3 VSS opamp
+XR1 node_3 VDD VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
 .ends
 
 
