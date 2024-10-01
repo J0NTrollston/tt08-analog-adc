@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1727471841
+timestamp 1727813218
 << nwell >>
 rect 5004 1172 5932 1242
 rect 5004 1170 5560 1172
@@ -220,7 +220,7 @@ rect 7430 -1948 7896 -1936
 rect 7430 -1982 7656 -1948
 rect 7888 -1982 7896 -1948
 rect 7430 -2136 7896 -1982
-rect 2744 -2300 8148 -2136
+rect 2744 -2300 7896 -2136
 rect 2744 -2302 2944 -2300
 << via1 >>
 rect 3738 2956 3794 3012
@@ -433,16 +433,10 @@ timestamp 1727401017
 transform 1 0 3770 0 1 -1255
 box -258 -761 258 761
 << labels >>
-flabel metal1 2742 -592 2942 -392 0 FreeSans 256 0 0 0 ZREF
-port 1 nsew
-flabel metal1 2744 -2302 2944 -2102 0 FreeSans 256 0 0 0 VGND
-port 5 nsew
-flabel metal1 2742 1010 2942 1210 0 FreeSans 256 0 0 0 vin_p
-port 3 nsew
-flabel metal1 2746 214 2946 414 0 FreeSans 256 0 0 0 vin_n
-port 2 nsew
 flabel metal1 2738 3376 2938 3576 0 FreeSans 256 0 0 0 VDD
-port 0 nsew
+flabel metal1 2742 -592 2942 -392 0 FreeSans 256 0 0 0 ZREF
+flabel metal1 2746 214 2946 414 0 FreeSans 256 0 0 0 vin_n
+flabel metal1 2742 1010 2942 1210 0 FreeSans 256 0 0 0 vin_p
+flabel metal1 2744 -2302 2944 -2102 0 FreeSans 256 0 0 0 VGND
 flabel metal1 11716 -1480 11916 -1280 0 FreeSans 256 0 0 0 Vout
-port 4 nsew
 << end >>
