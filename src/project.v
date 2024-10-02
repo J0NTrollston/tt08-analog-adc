@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um_example (
+module tt_um_brandonramos_opamp_ladder (
     input  wire       VGND,
     input  wire       VDPWR,    // 1.8v power supply
 //    input  wire       VAPWR,    // 3.3v power supply
@@ -19,5 +19,55 @@ module tt_um_example (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
+
+wire [3:0] analog_to_digital_in;
+
+//digital
+adc_digital_control adc_digital_control(
+    .analog_to_digital_in(analog_to_digital_in),
+    .encoded_out(uo_out[1:0]),
+    .VPWR(VDPWR),
+    .VGND(VGND)
+    );
+
+//analog
+opamp_ladder opamp_ladder(
+    .in(ua[0]),
+    .out0(analog_to_digital_in[0]),
+    .out1(analog_to_digital_in[1]),
+    .out2(analog_to_digital_in[2]),
+    .out3(analog_to_digital_in[3]),
+    .VDD(VDPWR),
+    .VSS(VGND)
+    );
+
+
+    // ties for the output enables
+    // assign uo_out[0] = VGND;
+    // assign uo_out[1] = VGND;
+    assign uo_out[2] = VGND;
+    assign uo_out[3] = VGND;
+    assign uo_out[4] = VGND;
+    assign uo_out[5] = VGND;
+    assign uo_out[6] = VGND;
+    assign uo_out[7] = VGND;
+
+    assign uio_out[0] = VGND;
+    assign uio_out[1] = VGND;
+    assign uio_out[2] = VGND;
+    assign uio_out[3] = VGND;
+    assign uio_out[4] = VGND;
+    assign uio_out[5] = VGND;
+    assign uio_out[6] = VGND;
+    assign uio_out[7] = VGND;
+
+    assign uio_oe[0] = VGND;
+    assign uio_oe[1] = VGND;
+    assign uio_oe[2] = VGND;
+    assign uio_oe[3] = VGND;
+    assign uio_oe[4] = VGND;
+    assign uio_oe[5] = VGND;
+    assign uio_oe[6] = VGND;
+    assign uio_oe[7] = VGND;
 
 endmodule
