@@ -1,5 +1,6 @@
 `default_nettype none
 module adc_digital_control (
+    // input wire clk,
     input wire [3:0] analog_to_digital_in,
     output wire [1:0] encoded_out);
 

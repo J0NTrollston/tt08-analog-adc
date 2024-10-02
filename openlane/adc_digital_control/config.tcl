@@ -1,6 +1,6 @@
 # PL_TARGET_DENSITY - You can increase this if Global Placement fails with error GPL-0302.
 # Users have reported that values up to 0.8 worked well for them.
-set ::env(PL_TARGET_DENSITY) 0.6
+set ::env(PL_TARGET_DENSITY) 0.8
 
 # CLOCK_PERIOD - Increase this in case you are getting setup time violations.
 # The value is in nanoseconds, so 10ns == 100MHz.
@@ -42,7 +42,7 @@ set ::env(RIGHT_MARGIN_MULT) 6
 
 # Absolute die size
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 80 80"
+set ::env(DIE_AREA) "0 0 25 15"
 
 set ::env(PL_BASIC_PLACEMENT) {0}
 set ::env(GRT_ALLOW_CONGESTION) "1"
@@ -59,8 +59,8 @@ set ::env(DECAP_CELL) "\
     sky130_ef_sc_hd__decap_12"
 
 # Clock
-set ::env(RUN_CTS) 1
-set ::env(CLOCK_PORT) {clk}
+# set ::env(RUN_CTS) 1
+#set ::env(CLOCK_PORT) {clk}
 
 # Don't use power rings or met5 layer
 set ::env(DESIGN_IS_CORE) 0
