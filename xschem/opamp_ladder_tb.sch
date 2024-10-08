@@ -5,9 +5,9 @@ K {}
 V {}
 S {}
 E {}
-B 2 570 -260 1370 140 {flags=graph
+B 2 640 -290 1440 110 {flags=graph
 y1=0
-y2=2
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
@@ -31,6 +31,32 @@ out0
 out1
 out2
 out3"}
+B 2 640 140 1440 540 {flags=graph
+y1=0
+y2=1.8
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1.8
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+color="4 5 6 7 8"
+node="in
+out0_parax
+out1_parax
+out2_parax
+out3_parax"}
 N 540 -340 540 -320 {
 lab=GND}
 N 600 -340 600 -320 {
@@ -50,6 +76,22 @@ lab=out3}
 N 430 -150 440 -150 {
 lab=out1}
 N 100 -160 120 -160 {
+lab=in}
+N 280 220 280 240 {
+lab=VDD}
+N 280 400 280 420 {
+lab=VSS}
+N 120 320 130 320 {
+lab=in}
+N 430 350 440 350 {
+lab=out0_parax}
+N 430 310 440 310 {
+lab=out2_parax}
+N 430 290 440 290 {
+lab=out3_parax}
+N 430 330 440 330 {
+lab=out1_parax}
+N 100 320 120 320 {
 lab=in}
 C {devices/code.sym} -180 -170 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -92,4 +134,17 @@ write opamp_ladder_tb.raw
 .endc
 "}
 C {devices/ipin.sym} 100 -160 0 0 {name=p5 lab=in
+}
+C {opamp_ladder.sym} 280 320 0 0 {name=x2
+schematic=opamp_ladder_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/opamp_ladder.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/opamp_ladder.sim.spice]"
+}
+C {devices/lab_pin.sym} 280 220 0 0 {name=p10 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 280 420 0 0 {name=p11 sig_type=std_logic lab=VSS}
+C {devices/opin.sym} 440 350 0 0 {name=p12 lab=out0_parax}
+C {devices/opin.sym} 440 330 0 0 {name=p13 lab=out1_parax}
+C {devices/opin.sym} 440 310 0 0 {name=p14 lab=out2_parax}
+C {devices/opin.sym} 440 290 0 0 {name=p15 lab=out3_parax}
+C {devices/ipin.sym} 100 320 0 0 {name=p16 lab=in
 }

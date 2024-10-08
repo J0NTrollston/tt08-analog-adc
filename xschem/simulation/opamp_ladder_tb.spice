@@ -1,13 +1,19 @@
 ** sch_path: /home/ttuser/Documents/tt08-analog-adc/xschem/opamp_ladder_tb.sch
-**.subckt opamp_ladder_tb out0 out1 out2 out3 in
+**.subckt opamp_ladder_tb out0 out1 out2 out3 in out0_parax out1_parax out2_parax out3_parax in
 *.opin out0
 *.opin out1
 *.opin out2
 *.opin out3
 *.ipin in
+*.opin out0_parax
+*.opin out1_parax
+*.opin out2_parax
+*.opin out3_parax
+*.ipin in
 x1 VDD in VSS out3 out2 out1 out0 opamp_ladder
 V1 VSS GND 0
 V2 VDD GND 1.8
+x2 in out3_parax out2_parax out1_parax out0_parax VSS VDD opamp_ladder_parax
 **** begin user architecture code
 
 ** opencircuitdesign pdks install
@@ -51,6 +57,10 @@ x4 VDD VSS node_3 in out3 VSS opamp
 XR1 node_3 VDD VSS sky130_fd_pr__res_generic_nd W=1 L=8.4 mult=1 m=1
 .ends
 
+
+* expanding   symbol:  opamp_ladder_parax.sym # of pins=7
+** sym_path: /home/ttuser/Documents/tt08-analog-adc/xschem/opamp_ladder.sym
+.include /home/ttuser/Documents/tt08-analog-adc/mag/opamp_ladder.sim.spice
 
 * expanding   symbol:  opamp.sym # of pins=6
 ** sym_path: /home/ttuser/Documents/tt08-analog-adc/xschem/opamp.sym

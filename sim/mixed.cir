@@ -36,12 +36,12 @@ vcc vcc 0 {vcc}
 * reset signal
  * Vreset n_rst 0 PULSE 3 0 1n 1u 10p 1u 500u
 
-Vin0 in0 0 PULSE 0 5 50u 350u 1n
+Vin0 in0 0 PULSE 0 1.8 50u 350u 1n
 
 
 
 .control
- tran 100n 4m UIC
+ tran 100n 500u UIC
 plot in0 analog_to_digital_in_0 analog_to_digital_in_1 analog_to_digital_in_2 analog_to_digital_in_3
 plot in0 encoded_out_0 encoded_out_1
 .endc
