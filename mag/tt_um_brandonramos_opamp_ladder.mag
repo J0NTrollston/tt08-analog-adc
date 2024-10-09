@@ -1,7 +1,20 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1728455122
+timestamp 1728463065
+<< error_s >>
+rect 2886 41440 2942 41468
+rect 2914 41418 2964 41440
+rect 2886 41390 2992 41418
+rect 2886 41362 2914 41390
+rect 2964 41362 2992 41390
+rect 2936 41290 2992 41318
+rect 2914 41268 2964 41290
+rect 2736 41240 2792 41268
+rect 2764 41212 2792 41240
+rect 2886 41240 2964 41268
+rect 2886 41212 2914 41240
+rect 3464 24784 3470 24890
 << nwell >>
 rect 18902 42223 19223 42882
 << metal1 >>
@@ -503,6 +516,10 @@ use adc_digital_control  adc_digital_control_0
 timestamp 1727826562
 transform -1 0 22030 0 1 40330
 box 514 0 4576 3000
+use halo_logo  halo_logo_0
+timestamp 1728463006
+transform 0 -1 18464 1 0 5940
+box 9350 13100 35650 16900
 use opamp_ladder  opamp_ladder_0
 timestamp 1728455122
 transform 0 -1 14726 1 0 -2498
