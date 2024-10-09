@@ -57,6 +57,34 @@ out0_parax
 out1_parax
 out2_parax
 out3_parax"}
+B 2 1550 -80 2350 320 {flags=graph
+y1=0
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1.8
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="out0
+out0_parax
+out1
+out1_parax
+out2
+out2_parax
+out3
+out3_parax"
+color="4 5 6 7 8 9 10 11"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
 N 540 -340 540 -320 {
 lab=GND}
 N 600 -340 600 -320 {
