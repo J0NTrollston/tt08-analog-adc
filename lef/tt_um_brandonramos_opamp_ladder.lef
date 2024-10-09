@@ -484,7 +484,7 @@ MACRO tt_um_brandonramos_opamp_ladder
       LAYER met1 ;
         RECT 11.615 2.425 147.910 212.770 ;
       LAYER met2 ;
-        RECT 8.305 2.395 145.570 218.865 ;
+        RECT 7.820 2.395 145.570 218.865 ;
       LAYER met3 ;
         RECT 0.980 2.370 142.280 220.075 ;
       LAYER met4 ;
