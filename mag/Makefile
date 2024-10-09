@@ -18,18 +18,18 @@ start: $(TEMPLATE_FILE)
 	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/tt-analog-draw.tcl $(TEMPLATE_FILE) $(PROJECT_NAME)
 
 $(PROJECT_NAME).lvs.spice: $(PROJECT_NAME).mag
-	magic -noconsole -dnull tcl/extract_for_lvs.tcl $(PROJECT_NAME)
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/extract_for_lvs.tcl $(PROJECT_NAME)
 	rm -f *.ext
 
 antenna:
-	magic -noconsole -dnull tcl/antenna.tcl $(PROJECT_NAME)
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/antenna.tcl $(PROJECT_NAME)
 	rm -f *.ext
 
 drc:
-	magic -noconsole -dnull tcl/drc.tcl $(PROJECT_NAME)
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/drc.tcl $(PROJECT_NAME)
 	
 $(PROJECT_NAME).sim.spice: $(PROJECT_NAME).mag
-	magic -noconsole -dnull tcl/extract_for_sim.tcl $(PROJECT_NAME)
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/extract_for_sim.tcl $(PROJECT_NAME)
 	rm -f *.ext
 
 lvs.report: $(PROJECT_NAME).lvs.spice ../src/project.v
