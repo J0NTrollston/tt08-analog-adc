@@ -5,39 +5,11 @@ K {}
 V {}
 S {}
 E {}
-N 160 -60 160 -55 {
-lab=VSS}
-N 160 -55 200 -55 {
-lab=VSS}
 N 200 -60 200 -55 {
 lab=VSS}
 N -100 0 -100 10 {
 lab=VSS}
-N 180 -55 180 -40 {
-lab=VSS}
-N 160 -240 160 -235 {
-lab=VSS}
-N 160 -235 200 -235 {
-lab=VSS}
-N 200 -240 200 -235 {
-lab=VSS}
-N 180 -235 180 -220 {
-lab=VSS}
-N 160 -420 160 -415 {
-lab=VSS}
-N 160 -415 200 -415 {
-lab=VSS}
-N 200 -420 200 -415 {
-lab=VSS}
-N 180 -415 180 -400 {
-lab=VSS}
-N 160 -600 160 -595 {
-lab=VSS}
-N 160 -595 200 -595 {
-lab=VSS}
-N 200 -600 200 -595 {
-lab=VSS}
-N 180 -595 180 -580 {
+N 200 -55 200 -40 {
 lab=VSS}
 N -130 -30 -120 -30 {
 lab=VSS}
@@ -57,13 +29,11 @@ N -100 -360 -100 -240 {
 lab=node_1}
 N -100 -180 -100 -60 {
 lab=node_0}
-N 180 -190 180 -170 {
+N 200 -180 200 -160 {
 lab=VDD}
-N 180 -370 180 -350 {
+N 200 -540 200 -520 {
 lab=VDD}
-N 180 -550 180 -530 {
-lab=VDD}
-N 180 -730 180 -710 {
+N 200 -720 200 -700 {
 lab=VDD}
 N -100 -140 120 -140 {
 lab=node_0}
@@ -103,49 +73,33 @@ N 40 -800 40 -795 {
 lab=in}
 N -100 -800 -100 -780 {
 lab=VDD}
+N 200 -600 200 -580 {
+lab=VSS}
+N 200 -420 200 -400 {
+lab=VSS}
+N 200 -360 200 -340 {
+lab=VDD}
+N 200 -240 200 -220 {
+lab=VSS}
 C {opamp.sym} 190 -120 0 0 {name=x1}
-C {sky130_fd_pr/res_generic_nd.sym} -100 -30 0 0 {name=R2
-W=1
-L=8.4
-spiceprefix=X
-model=res_generic_nd
-mult=1}
-C {sky130_fd_pr/res_generic_nd.sym} -100 -210 0 0 {name=R3
-W=1
-L=8.4
-spiceprefix=X
-model=res_generic_nd
-mult=1}
-C {sky130_fd_pr/res_generic_nd.sym} -100 -390 0 0 {name=R4
-W=1
-L=8.4
-spiceprefix=X
-model=res_generic_nd
-mult=1}
-C {sky130_fd_pr/res_generic_nd.sym} -100 -570 0 0 {name=R5
-W=1
-L=8.4
-spiceprefix=X
-model=res_generic_nd
-mult=1}
 C {opamp.sym} 190 -300 0 0 {name=x2}
 C {opamp.sym} 190 -480 0 0 {name=x3}
 C {opamp.sym} 190 -660 0 0 {name=x4}
 C {devices/lab_pin.sym} -100 10 3 0 {name=p3 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 180 -40 0 0 {name=p4 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 180 -220 0 0 {name=p5 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 180 -400 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 180 -580 0 0 {name=p7 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 200 -40 0 0 {name=p4 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 200 -220 0 0 {name=p5 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 200 -400 0 0 {name=p6 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 200 -580 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -130 -30 0 0 {name=p8 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -130 -210 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -130 -390 0 0 {name=p10 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -130 -570 0 0 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -130 -750 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -100 -800 1 0 {name=p13 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 180 -190 2 0 {name=p14 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 180 -370 2 0 {name=p15 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 180 -550 2 0 {name=p16 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 180 -730 2 0 {name=p17 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 200 -180 2 0 {name=p14 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 200 -360 2 0 {name=p15 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 200 -540 2 0 {name=p16 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 200 -720 2 0 {name=p17 sig_type=std_logic lab=VDD}
 C {devices/opin.sym} 280 -120 0 0 {name=p18 lab=out0}
 C {devices/opin.sym} 280 -480 0 0 {name=p20 lab=out2}
 C {devices/opin.sym} 280 -660 0 0 {name=p21 lab=out3}
@@ -153,13 +107,32 @@ C {devices/ipin.sym} 40 -800 1 0 {name=p22 lab=in}
 C {devices/iopin.sym} -360 -820 0 0 {name=p23 lab=VDD}
 C {devices/iopin.sym} -360 -780 0 0 {name=p24 lab=VSS}
 C {devices/opin.sym} 280 -300 0 0 {name=p1 lab=out1}
-C {sky130_fd_pr/res_generic_nd.sym} -100 -750 0 0 {name=R1
-W=1
-L=8.4
-spiceprefix=X
-model=res_generic_nd
-mult=1}
 C {devices/lab_pin.sym} -100 -140 0 0 {name=p19 sig_type=std_logic lab=node_0}
 C {devices/lab_pin.sym} -100 -320 0 0 {name=p25 sig_type=std_logic lab=node_1}
 C {devices/lab_pin.sym} -100 -500 0 0 {name=p26 sig_type=std_logic lab=node_2}
 C {devices/lab_pin.sym} -100 -680 0 0 {name=p27 sig_type=std_logic lab=node_3}
+C {sky130_fd_pr/res_high_po_0p69.sym} -100 -750 0 0 {name=R1
+L=7.34
+model=res_high_po_0p69
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_0p69.sym} -100 -570 0 0 {name=R2
+L=3.45
+model=res_high_po_0p69
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_0p69.sym} -100 -390 0 0 {name=R3
+L=3.45
+model=res_high_po_0p69
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_0p69.sym} -100 -210 0 0 {name=R4
+L=3.45
+model=res_high_po_0p69
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_0p69.sym} -100 -30 0 0 {name=R5
+L=3.45
+model=res_high_po_0p69
+spiceprefix=X
+mult=1}
