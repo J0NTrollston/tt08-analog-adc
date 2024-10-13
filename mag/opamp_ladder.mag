@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1728846502
+timestamp 1728848001
 << viali >>
 rect -416 2304 -382 2510
 rect -588 2216 -382 2250
@@ -159,19 +159,19 @@ rect 5424 2334 6584 2398
 rect 7916 2334 9076 2398
 use opamp  x1
 timestamp 1728846299
-transform 1 0 -6548 0 1 1928
+transform 1 0 928 0 1 1928
 box 6548 -1328 9040 3722
 use opamp  x2
 timestamp 1728846299
-transform 1 0 -4056 0 1 1928
+transform 1 0 -1564 0 1 1928
 box 6548 -1328 9040 3722
 use opamp  x3
 timestamp 1728846299
-transform 1 0 -1564 0 1 1928
+transform 1 0 -4056 0 1 1928
 box 6548 -1328 9040 3722
 use opamp  x4
 timestamp 1728846299
-transform 1 0 928 0 1 1928
+transform 1 0 -6548 0 1 1928
 box 6548 -1328 9040 3722
 use sky130_fd_pr__res_high_po_0p69_PFVE8M  XR1
 timestamp 1728801405
