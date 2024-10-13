@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1728800409
+timestamp 1728846299
 << pwell >>
 rect 8840 1146 8888 1346
 rect 8910 -740 9016 -494
@@ -58,10 +58,8 @@ rect 8040 640 8314 1842
 rect 8446 1832 8550 1842
 rect 8452 640 8550 1832
 rect 6802 520 6890 526
-rect 6548 346 6748 402
-rect 6802 346 6890 432
-rect 6548 258 6890 346
-rect 6548 202 6748 258
+rect 6802 402 6890 432
+rect 6742 202 6942 402
 rect 7280 168 7552 600
 rect 7822 300 7890 640
 rect 7930 520 8018 594
@@ -76,10 +74,10 @@ rect 8470 354 8796 490
 rect 7822 244 8440 300
 rect 7822 212 7890 244
 rect 8470 212 8550 354
-rect 6548 -58 6748 2
-rect 6548 -146 6800 -58
-rect 6888 -146 6894 -58
-rect 6548 -198 6748 -146
+rect 6742 -64 6942 2
+rect 6742 -152 6800 -64
+rect 6888 -152 6942 -64
+rect 6742 -198 6942 -152
 rect 7280 -164 7352 168
 rect 7098 -596 7352 -164
 rect 7346 -686 7392 -680
@@ -114,7 +112,7 @@ rect 6548 -1328 9040 -1162
 rect 6802 432 6890 520
 rect 7930 432 8018 520
 rect 8336 432 8424 520
-rect 6800 -146 6888 -58
+rect 6800 -152 6888 -64
 << metal2 >>
 rect 8326 520 8434 530
 rect 6796 432 6802 520
@@ -127,8 +125,8 @@ rect 6805 144 6883 148
 rect 6800 139 6888 144
 rect 6800 61 6805 139
 rect 6883 61 6888 139
-rect 6800 -58 6888 61
-rect 6800 -152 6888 -146
+rect 6800 -64 6888 61
+rect 6800 -158 6888 -152
 << via2 >>
 rect 8336 432 8424 520
 rect 6805 61 6883 139
@@ -177,10 +175,6 @@ use sky130_fd_pr__pfet_01v8_XPP7BA  XM8
 timestamp 1728771870
 transform 1 0 7974 0 1 2773
 box -256 -819 256 819
-use sky130_fd_pr__res_high_po_0p35_WFRDHL  XR1
-timestamp 1728771870
-transform 1 0 7133 0 1 220
-box -201 -982 201 982
 use sky130_fd_pr__res_high_po_0p35_WFRDHL  XR2
 timestamp 1728771870
 transform 1 0 6749 0 1 2184
@@ -197,6 +191,10 @@ use sky130_fd_pr__res_high_po_0p35_WFRDHL  XR
 timestamp 1728771870
 transform 1 0 7517 0 1 -216
 box -201 -982 201 982
+use sky130_fd_pr__res_high_po_0p35_WFRDHL  XR1
+timestamp 1728771870
+transform 1 0 7133 0 1 220
+box -201 -982 201 982
 << labels >>
 flabel metal1 8840 1146 9040 1346 0 FreeSans 256 0 0 0 Vout
 port 3 nsew
@@ -204,8 +202,8 @@ flabel metal1 6548 3522 6748 3722 0 FreeSans 256 0 0 0 VDD
 port 0 nsew
 flabel metal1 6548 -1328 6748 -1128 0 FreeSans 256 0 0 0 VGND
 port 4 nsew
-flabel metal1 6548 202 6748 402 0 FreeSans 256 0 0 0 vin_n
-port 1 nsew
-flabel metal1 6548 -198 6748 2 0 FreeSans 256 0 0 0 vin_p
+flabel metal1 6742 -198 6942 2 0 FreeSans 256 0 0 0 vin_p
 port 2 nsew
+flabel metal1 6742 202 6942 402 0 FreeSans 256 0 0 0 vin_n
+port 1 nsew
 << end >>
