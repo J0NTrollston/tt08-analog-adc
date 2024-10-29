@@ -38,7 +38,7 @@ always @(posedge roll or posedge btn or negedge reset_n) begin //run the followi
             time_length <= 20;
         else if (roll == 1'b1) begin    
             if (time_length < 22) begin
-                if ((time_length >= 0) && (time_length < 10)) begin
+                if (time_length < 10) begin
                     sw_traffic_lights <= 2'b01; // red
                 end
                 else if ((time_length >= 10) && (time_length < 20)) begin

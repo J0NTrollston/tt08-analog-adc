@@ -1,0 +1,2 @@
+mixed_simulation:
+	ngspice vlnggen ../verilog/rtl/adc_digital_control.v ../verilog/rtl/traffic_lights.v ../verilog/rtl/control_unit.v ../verilog/rtl/datapath.v ../verilog/rtl/counter.v ../verilog/rtl/glue_logic.v

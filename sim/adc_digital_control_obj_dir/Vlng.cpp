@@ -9,8 +9,12 @@
 Vlng::Vlng(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vlng__Syms(contextp(), _vcname__, this)}
+    , clk{vlSymsp->TOP.clk}
+    , reset_n{vlSymsp->TOP.reset_n}
+    , btn{vlSymsp->TOP.btn}
     , analog_to_digital_in{vlSymsp->TOP.analog_to_digital_in}
     , encoded_out{vlSymsp->TOP.encoded_out}
+    , control{vlSymsp->TOP.control}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

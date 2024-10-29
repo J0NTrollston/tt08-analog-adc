@@ -1,13 +1,13 @@
 `default_nettype none
+`timescale 1ns / 1ns
 module adc_digital_control (
     // input wire clk,
-    input wire [3:0] analog_to_digital_in,
-    output wire [1:0] encoded_out,
-
-    //traffic light
     input wire clk,
     input wire reset_n,
     input wire btn,
+    input wire [3:0] analog_to_digital_in,
+    output wire [1:0] encoded_out,
+
     output wire [2:0]control
     );
 

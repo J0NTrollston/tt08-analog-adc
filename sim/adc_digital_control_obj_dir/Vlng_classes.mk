@@ -29,6 +29,7 @@ VM_CLASSES_FAST += \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
+	Vlng__ConstPool_0 \
 	Vlng___024root__Slow \
 	Vlng___024root__DepSet_h9def6047__0__Slow \
 	Vlng___024root__DepSet_h26a4896e__0__Slow \

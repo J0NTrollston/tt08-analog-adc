@@ -28,7 +28,7 @@ output wire [2:0] cw_traffic_lights
 
 //Signals
 //FSM states for traffic lights
-localparam [2:0] RST = 2'd0,
+localparam [1:0] RST = 2'd0,
                  Red = 2'd1,
                  Green = 2'd2,
                  Yellow = 2'd3;

@@ -1,4 +1,4 @@
-Simulation of an R2R DAC with Verilator and d_cosim
+* Simulation of an R2R DAC with Verilator and d_cosim
 
 .lib /home/ttuser/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
@@ -6,7 +6,7 @@ Simulation of an R2R DAC with Verilator and d_cosim
 
 * The digital portion of the circuit is specified in compiled Verilog.
 * list the inputs and outputs
-adut [ analog_to_digital_in_3 analog_to_digital_in_2 analog_to_digital_in_1 analog_to_digital_in_0 ] [encoded_out_1 encoded_out_0] null dut
+adut [clk reset_n btn analog_to_digital_in_3 analog_to_digital_in_2 analog_to_digital_in_1 analog_to_digital_in_0 ] [encoded_out_1 encoded_out_0 control_2 control_1 control_0] null dut
 .model dut d_cosim simulation="./adc_digital_control.so"
 
 * connect the driver to the R2R dac
@@ -34,7 +34,7 @@ vcc vcc 0 {vcc}
 * .model clock d_osc cntl_array=[-1 1] freq_array=[1Meg 1Meg]
 
 * reset signal
- * Vreset n_rst 0 PULSE 3 0 1n 1u 10p 1u 500u
+* Vreset n_rst 0 PULSE 3 0 1n 1u 10p 1u 500u
 
 Vin0 in0 0 PULSE 0 1.8 50u 350u 1n
 
