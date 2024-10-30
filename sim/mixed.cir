@@ -30,19 +30,24 @@ vcc vcc 0 {vcc}
 
 * Digital clock signal
 
-* aclock 0 clk clock
-* .model clock d_osc cntl_array=[-1 1] freq_array=[1Meg 1Meg]
+aclock 0 clk clock
+.model clock d_osc cntl_array=[-1 1] freq_array=[1Meg 1Meg]
 
 * reset signal
-* Vreset n_rst 0 PULSE 3 0 1n 1u 10p 1u 500u
+*Vreset reset_n 0 PULSE 0 1 1n 1u 10p 1u 4000u
+Vreset reset_n 0 PULSE 0 1 10u 1n 10p 4000u 4000u
 
 Vin0 in0 0 PULSE 0 1.8 50u 350u 1n
 
 
 
 .control
- tran 100n 500u UIC
+ tran 100n 4000u UIC
 plot in0 analog_to_digital_in_0 analog_to_digital_in_1 analog_to_digital_in_2 analog_to_digital_in_3
 plot in0 encoded_out_0 encoded_out_1
+plot clk 
+plot reset_n 
+plot control_0 control_1 control_2
+plot btn
 .endc
 .end
