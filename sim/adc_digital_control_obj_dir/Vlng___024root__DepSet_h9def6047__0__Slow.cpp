@@ -20,7 +20,7 @@ VL_ATTR_COLD void Vlng___024root___eval_initial__TOP(Vlng___024root* vlSelf) {
     __Vtemp_1[4U] = 0x5f646967U;
     __Vtemp_1[5U] = 0x616463U;
     vlSymsp->_vm_contextp__->dumpfile(VL_CVT_PACK_STR_NW(6, __Vtemp_1));
-    VL_PRINTF_MT("-Info: ../verilog/rtl/adc_digital_control.v:10: $dumpvar ignored, as Verilated without --trace\n");
+    VL_PRINTF_MT("-Info: ../verilog/rtl/adc_digital_control.v:17: $dumpvar ignored, as Verilated without --trace\n");
 }
 
 #ifdef VL_DEBUG

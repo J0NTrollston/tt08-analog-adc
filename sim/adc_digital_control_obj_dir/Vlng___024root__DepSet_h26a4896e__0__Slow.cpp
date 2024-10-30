@@ -19,6 +19,11 @@ VL_ATTR_COLD void Vlng___024root___eval_initial(Vlng___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_initial\n"); );
     // Body
     Vlng___024root___eval_initial__TOP(vlSelf);
+    vlSelf->__Vtrigprevexpr___TOP__clk__0 = vlSelf->clk;
+    vlSelf->__Vtrigprevexpr___TOP__adc_digital_control__DOT__traffic_lights__DOT__datapath__DOT__roll__0 
+        = vlSelf->adc_digital_control__DOT__traffic_lights__DOT__datapath__DOT__roll;
+    vlSelf->__Vtrigprevexpr___TOP__btn__0 = vlSelf->btn;
+    vlSelf->__Vtrigprevexpr___TOP__reset_n__0 = vlSelf->reset_n;
 }
 
 VL_ATTR_COLD void Vlng___024root___eval_final(Vlng___024root* vlSelf) {
@@ -48,7 +53,7 @@ VL_ATTR_COLD void Vlng___024root___eval_settle(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vlng___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("../verilog/rtl/adc_digital_control.v", 2, "", "Settle region did not converge.");
+            VL_FATAL_MT("../verilog/rtl/adc_digital_control.v", 3, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;
@@ -74,7 +79,7 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__stl(Vlng___024root* vlSelf) {
 }
 #endif  // VL_DEBUG
 
-void Vlng___024root___ico_sequent__TOP__0(Vlng___024root* vlSelf);
+VL_ATTR_COLD void Vlng___024root___stl_sequent__TOP__0(Vlng___024root* vlSelf);
 
 VL_ATTR_COLD void Vlng___024root___eval_stl(Vlng___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
@@ -82,8 +87,29 @@ VL_ATTR_COLD void Vlng___024root___eval_stl(Vlng___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_stl\n"); );
     // Body
     if ((1ULL & vlSelf->__VstlTriggered.word(0U))) {
-        Vlng___024root___ico_sequent__TOP__0(vlSelf);
+        Vlng___024root___stl_sequent__TOP__0(vlSelf);
     }
+}
+
+VL_ATTR_COLD void Vlng___024root___stl_sequent__TOP__0(Vlng___024root* vlSelf) {
+    (void)vlSelf;  // Prevent unused variable warning
+    Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___stl_sequent__TOP__0\n"); );
+    // Body
+    vlSelf->encoded_out = ((1U == (IData)(vlSelf->analog_to_digital_in))
+                            ? 0U : ((3U == (IData)(vlSelf->analog_to_digital_in))
+                                     ? 1U : ((7U == (IData)(vlSelf->analog_to_digital_in))
+                                              ? 2U : 
+                                             ((0xfU 
+                                               == (IData)(vlSelf->analog_to_digital_in))
+                                               ? 3U
+                                               : 0U))));
+    vlSelf->control = ((1U == (IData)(vlSelf->adc_digital_control__DOT__traffic_lights__DOT__control_unit__DOT__state_traffic_lights))
+                        ? 4U : ((2U == (IData)(vlSelf->adc_digital_control__DOT__traffic_lights__DOT__control_unit__DOT__state_traffic_lights))
+                                 ? 2U : ((3U == (IData)(vlSelf->adc_digital_control__DOT__traffic_lights__DOT__control_unit__DOT__state_traffic_lights))
+                                          ? 1U : 0U)));
+    vlSelf->adc_digital_control__DOT__traffic_lights__DOT__datapath__DOT__roll 
+        = (0x7fU == (IData)(vlSelf->adc_digital_control__DOT__traffic_lights__DOT__datapath__DOT__counter__DOT__processQ));
 }
 
 VL_ATTR_COLD void Vlng___024root___eval_triggers__stl(Vlng___024root* vlSelf);
@@ -127,6 +153,12 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__act(Vlng___024root* vlSelf) {
     if ((1U & (~ vlSelf->__VactTriggered.any()))) {
         VL_DBG_MSGF("         No triggers active\n");
     }
+    if ((1ULL & vlSelf->__VactTriggered.word(0U))) {
+        VL_DBG_MSGF("         'act' region trigger index 0 is active: @(posedge clk)\n");
+    }
+    if ((2ULL & vlSelf->__VactTriggered.word(0U))) {
+        VL_DBG_MSGF("         'act' region trigger index 1 is active: @(posedge adc_digital_control.traffic_lights.datapath.roll or posedge btn or negedge reset_n)\n");
+    }
 }
 #endif  // VL_DEBUG
 
@@ -139,6 +171,12 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__nba(Vlng___024root* vlSelf) {
     if ((1U & (~ vlSelf->__VnbaTriggered.any()))) {
         VL_DBG_MSGF("         No triggers active\n");
     }
+    if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
+        VL_DBG_MSGF("         'nba' region trigger index 0 is active: @(posedge clk)\n");
+    }
+    if ((2ULL & vlSelf->__VnbaTriggered.word(0U))) {
+        VL_DBG_MSGF("         'nba' region trigger index 1 is active: @(posedge adc_digital_control.traffic_lights.datapath.roll or posedge btn or negedge reset_n)\n");
+    }
 }
 #endif  // VL_DEBUG
 
@@ -147,6 +185,19 @@ VL_ATTR_COLD void Vlng___024root___ctor_var_reset(Vlng___024root* vlSelf) {
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___ctor_var_reset\n"); );
     // Body
+    vlSelf->clk = VL_RAND_RESET_I(1);
+    vlSelf->reset_n = VL_RAND_RESET_I(1);
+    vlSelf->btn = VL_RAND_RESET_I(1);
     vlSelf->analog_to_digital_in = VL_RAND_RESET_I(4);
     vlSelf->encoded_out = VL_RAND_RESET_I(2);
+    vlSelf->control = VL_RAND_RESET_I(3);
+    vlSelf->adc_digital_control__DOT__traffic_lights__DOT__sw_traffic_lights = VL_RAND_RESET_I(2);
+    vlSelf->adc_digital_control__DOT__traffic_lights__DOT__datapath__DOT__roll = VL_RAND_RESET_I(1);
+    vlSelf->adc_digital_control__DOT__traffic_lights__DOT__datapath__DOT__counter__DOT__processQ = VL_RAND_RESET_I(7);
+    vlSelf->adc_digital_control__DOT__traffic_lights__DOT__datapath__DOT__glue_logic__DOT__time_length = VL_RAND_RESET_I(5);
+    vlSelf->adc_digital_control__DOT__traffic_lights__DOT__control_unit__DOT__state_traffic_lights = VL_RAND_RESET_I(2);
+    vlSelf->__Vtrigprevexpr___TOP__clk__0 = VL_RAND_RESET_I(1);
+    vlSelf->__Vtrigprevexpr___TOP__adc_digital_control__DOT__traffic_lights__DOT__datapath__DOT__roll__0 = VL_RAND_RESET_I(1);
+    vlSelf->__Vtrigprevexpr___TOP__btn__0 = VL_RAND_RESET_I(1);
+    vlSelf->__Vtrigprevexpr___TOP__reset_n__0 = VL_RAND_RESET_I(1);
 }

@@ -11,7 +11,7 @@ img = Image.open("halo.png")
 LAYER = 69    # met2
 DATATYPE = 20 # drawing
 # PIXEL_SIZE = 0.28 # um
-PIXEL_SIZE = 0.25 # um
+PIXEL_SIZE = 0.2 # um
 # Convert the image to grayscale
 img = img.convert("L")
 
