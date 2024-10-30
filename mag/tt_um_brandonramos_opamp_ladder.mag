@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1730228180
+timestamp 1730259253
 << metal1 >>
 rect 19396 31190 19596 31196
 rect 19596 30990 26172 31190
@@ -361,10 +361,22 @@ use adc_digital_control  adc_digital_control_1
 timestamp 1730221101
 transform 1 0 11174 0 1 31646
 box 514 0 12000 10000
+use halo_logo  halo_logo_0
+timestamp 1730259253
+transform 0 -1 30034 1 0 6778
+box 80 40 23840 3360
+use mosfet_logo  mosfet_logo_0
+timestamp 1730258808
+transform 1 0 -2180 0 1 31984
+box 3880 560 12020 8540
 use opamp_ladder  opamp_ladder_0
 timestamp 1728848001
 transform -1 0 28500 0 1 268
 box -1708 600 10004 6050
+use zerotoasic_logo  zerotoasic_logo_0
+timestamp 1730256539
+transform 1 0 1636 0 1 6598
+box 0 0 22400 22400
 << labels >>
 flabel metal4 s 28766 44952 28826 45152 0 FreeSans 480 90 0 0 clk
 port 0 nsew signal input
